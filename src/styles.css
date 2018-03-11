@@ -1,0 +1,99 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+	font-family: 'Roboto', sans-serif;
+	background-color: #F4F5F7;
+	color: #262D60;
+}
+label{
+	font-weight: bold;
+}
+.btn-primary{
+	color: #fff;
+	background-color: #337ab7;
+	border-color: #2e6da4;
+}
+.btn-primary:hover{
+	background-color: #286090;
+}
+
+/* CARDS */
+.card{
+	margin-top: 30px;
+	
+}
+.card-header{	
+	background-color: white;
+}
+.card-header i{
+	color: #AFCA0A;
+}
+.card-header h5{
+	color: #262D60;
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+/* FOR TABLE */
+thead{
+	background-color:#262D60;
+	color: white;
+	font-weight: bold;
+	margin: 20px;
+	font-size: 18px;
+}
+.tbl-id{
+	text-align: center;
+	color: #AFCA0A;
+	font-weight: bold;
+	
+}
+th:first-child,
+th:last-child{
+	text-align: center;
+}
+td{
+	font-weight: bold;
+}
+/* CUSTOMIZE BUTTONS */
+.btn{
+	font-weight: bold;
+}
+.btn-success{
+	background-color: #AFCA0A;
+	border-color: #AFCA0A;
+}
+.btn-outline-success{
+	border: 2px solid #AFCA0A;
+	color: #AFCA0A;
+	font-weight: bold;
+	padding: 6px 20px;
+}
+.btn-outline-danger{
+	border: 2px solid #d9534f;
+	padding: 6px 20px;
+}
+.btn-primary{
+	background-color: #337ab7;
+	color: white;
+}
+.btn-outline-primary{
+	border: 2px solid #337ab7;
+	color: #337ab7;
+	padding: 6px 20px;
+}
+.btn-sm{
+	padding: 3px 10px;
+}
+#page-listing /deep/ .ngx-pagination .current {
+    background: #AFCA0A;
+  }
+#page-listing /deep/ .ngx-pagination a{
+	color: #262D60;
+	font-weight: bold;
+  }

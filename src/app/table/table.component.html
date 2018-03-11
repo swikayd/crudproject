@@ -1,0 +1,47 @@
+ <div class="card" *ngIf="complaints && complaints.length">
+    <div class="card-header">
+          <h5><i class="fas fa-table"></i> Complaint List</h5>
+      </div>
+      <div class="card-body table-responsive table-striped">
+        <div class="row">
+          <div class="col-md-4">
+            <a routerLink="/add" target="_blank" class="btn btn-outline-success create-btn"><i class="fas fa-plus"></i> COMPLAIN</a>
+          </div>
+     </div>
+      <table class="table table-hover table-sm">
+        <thead>
+          <tr class="table-header">
+            <th>ID</th>
+            <th>Year</th>
+            <th>Report Ref.</th>
+            <th>Domain</th>
+            <th>Com. Emp</th>
+            <th>Priority Type</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="entry_table">
+          <tr *ngFor="let complaint of complaints | paginate: { id: 'page-listing', itemsPerPage: 10, currentPage: page }">
+           <td class="tbl-id">{{complaint.ComplaintId}}</td>
+           <td>{{complaint.Year}}</td>
+           <td>{{complaint.ReportReference}}</td>
+           <td>{{complaint.Domain}}</td>
+           <td>{{complaint.CompanyEmp}}</td>
+           <td>{{complaint.ComplaintType | type }}</td>
+           <td>{{complaint.ComplaintStatus| status }}</td>
+           <td align="center">
+             <a class="btn btn-outline-success btn-sm action-btn" target="_blank" [routerLink]="['/update', complaint.ComplaintId]" tooltip="Show Details" placement="top"> View</a>
+          </td>
+       </tr>
+        </tbody>
+      </table>
+       <div class="row">
+         <div class="text-md-right col-md-12">
+         <pagination-controls  id="page-listing" maxSize="5" directionLinks="true" (pageChange)=" page = $event "></pagination-controls>
+       </div>
+      </div>
+      
+     </div>
+</div>
+    
