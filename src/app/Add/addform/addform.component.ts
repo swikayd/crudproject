@@ -41,7 +41,7 @@ export class AddformComponent implements OnInit {
           this.complaintService.saveComplaint(complaint).subscribe();
           alert("Complain has been Created!");
           this.complaintForm.reset();
-          window.location.href = "home";
+         
 
       }
   }
